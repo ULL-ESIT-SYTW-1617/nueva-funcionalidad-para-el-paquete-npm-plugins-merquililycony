@@ -15,6 +15,7 @@
     var url_r_; // para modificar la url del repository
     var n_gitbook; // para modificar el nombre del libro
     var url_b_; // para modificar la url de los bugs
+    var despliegue;
    // var url_wiki_;
 
     if( myargs.v || myargs.version){
@@ -33,6 +34,7 @@
       console.log("--name <nombre del gitbook>");
       console.log("--author <nombre del autor>");
       console.log("--url <url del repositorio>");
+      console.log("--deploy <ull-iaas-es>")
       console.log("--version");
 //
     } else {
