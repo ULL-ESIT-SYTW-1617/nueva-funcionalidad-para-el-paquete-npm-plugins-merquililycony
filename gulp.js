@@ -28,4 +28,12 @@ gulp.task('deploy', ['install-resource', 'push'], function()
            ]))
 });
 
+
+// Pull de iaas
+
+gulp.task('iaas', function() {
+    gulp.src(['./template/scripts/iaas']).exec();
+});
+
+
 gulp.task('default', ['deploy']);
