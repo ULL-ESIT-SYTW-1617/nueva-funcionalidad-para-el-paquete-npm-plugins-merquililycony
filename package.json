@@ -45,6 +45,9 @@
     "url": "https://github.com/ULL-ESIT-SYTW-1617/creacion-de-paquetes-y-modulos-en-nodejs-merquililycony/issues"
   },
   "homepage": "https://github.com/ULL-ESIT-SYTW-1617/creacion-de-paquetes-y-modulos-en-nodejs-merquililyconyy#readme",
+  "engines": {
+    "node": "4.5.0"
+  },
   "dependencies": {
     "ejs": "^2.5.2",
     "fs-extra": "^0.30.0",
