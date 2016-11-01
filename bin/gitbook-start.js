@@ -37,7 +37,7 @@ else
   }
   else
   {
-    if(myArgs.deploy)//NUEVA FUNCIONALIDAD DEPLOY
+    if(myargs.deploy)//NUEVA FUNCIONALIDAD DEPLOY
     {
       const packagejson = require(path.join(basePath, 'package.json'));
       console.log("Deploy ...  "+myArgs.deploy);
