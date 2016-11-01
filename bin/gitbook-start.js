@@ -21,10 +21,7 @@
       console.log("version:"+json.version);
     }
 
-    if(myargs.v || myargs.version)
-    {
-        console.log("Version:"+json.version);
-    }
+
     // Menu
     if (myargs.h || myargs.help) {
       console.log("Help!");
@@ -36,7 +33,10 @@
       console.log("--version");
       console.log("--deploy");
 //
-    } else {
+    } 
+
+
+    else {//CREAR GITBOOK
         gitconfig(function(err,config){
           if(err){
             console.error(err);
