@@ -34,6 +34,7 @@
       console.log("--author <nombre del autor>");
       console.log("--url <url del repositorio>");
       console.log("--version");
+      console.log("--deploy");
 //
     } else {
         gitconfig(function(err,config){
