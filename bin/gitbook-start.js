@@ -29,104 +29,111 @@ if (myargs.h || myargs.help) {
   console.log("--deploy");
   //
 }
-else{
+else
+{
   if( myargs.v || myargs.version){
     console.log("version:"+json.version);
   }
-
-
-
-
-  else {//CREAR GITBOOK
-    gitconfig(function(err,config){
-      if(err){
-        console.error(err);
-      }
-      autor = myargs.author || "User";
-      dir = myargs.d || 'MyBook';
-      n_gitbook = myargs.name || "MyBook";
-
-      if(myargs.url){
-        url_r_ = myargs.url;
-        // url_wiki_ = myargs.url.split(".git")[0].concat('.wiki.git');
-        url_b_ = myargs.url.split(".git")[0].concat('/issues');
-      }
-      else {
-        url_r_ = " ";
-        url_b_ = " ";
-        //url_wiki_ = " ";
-      }
-
-      // Construccion de MyBook
-      fs.mkdirp(path.join(basePath, dir), function(err){
+  else
+  {
+    if(myargs.deploy)
+    {
+      //............................
+      //...........................
+    }
+    else {//CREAR GITBOOK
+      gitconfig(function(err,config){
         if(err){
           console.error(err);
-        } else {
-
-          fs.copy(path.join(__dirname,'../template','gulpfile.js'), path.join(basePath, dir , 'gulpfile.js'));
-          fs.copy(path.join(__dirname,'../template','README.md'), path.join(basePath, dir , 'README.md'));
-          fs.copy(path.join(__dirname, '../template', 'VERSION'), path.join(basePath, dir , 'VERSION'));
-          fs.mkdirp(path.join(basePath, dir , 'scripts'), function (err) {
-
-            if (err) {
-              console.error(err);
-            }
-          });
-
-          fs.copy(path.join(__dirname, '../template', 'scripts') , path.join(basePath, dir ,'scripts'), function(err){
-            if(err){
-              return console.error(err);
-            }
-          });
-
-          fs.mkdirp(path.join(basePath, dir, '/txt'), function (err) {
-            if (err){
-              console.error(err);
-            } else {
-              fs.copy(path.join(__dirname, '../template', 'txt' , 'SUMMARY.md'), path.join(basePath, dir , 'txt', 'SUMMARY.md'));
-
-              fs.copy(path.join(__dirname,'../template', 'txt', 'section1'), path.join(basePath, dir , 'txt', 'section1'), function(err){
-                if(err) {
-                  return console.error(err);
-                }
-
-              });
-
-              ejs.renderFile(path.join(__dirname, '../template', 'txt', 'README.ejs'), { name_gb: n_gitbook}, function(err,str) {
-                if(err) {
-                  console.error(err);
-                  throw err;
-                } else {
-                  if(str)
-                  fs.writeFile(path.join(basePath, dir ,'txt', 'README.md'), str);
-                }
-              });
-            }
-          });
         }
+        autor = myargs.author || "User";
+        dir = myargs.d || 'MyBook';
+        n_gitbook = myargs.name || "MyBook";
+
+        if(myargs.url){
+          url_r_ = myargs.url;
+          // url_wiki_ = myargs.url.split(".git")[0].concat('.wiki.git');
+          url_b_ = myargs.url.split(".git")[0].concat('/issues');
+        }
+        else {
+          url_r_ = " ";
+          url_b_ = " ";
+          //url_wiki_ = " ";
+        }
+
+        // Construccion de MyBook
+        fs.mkdirp(path.join(basePath, dir), function(err){
+          if(err){
+            console.error(err);
+          } else {
+
+            fs.copy(path.join(__dirname,'../template','gulpfile.js'), path.join(basePath, dir , 'gulpfile.js'));
+            fs.copy(path.join(__dirname,'../template','README.md'), path.join(basePath, dir , 'README.md'));
+            fs.copy(path.join(__dirname, '../template', 'VERSION'), path.join(basePath, dir , 'VERSION'));
+            fs.mkdirp(path.join(basePath, dir , 'scripts'), function (err) {
+
+              if (err) {
+                console.error(err);
+              }
+            });
+
+            fs.copy(path.join(__dirname, '../template', 'scripts') , path.join(basePath, dir ,'scripts'), function(err){
+              if(err){
+                return console.error(err);
+              }
+            });
+
+            fs.mkdirp(path.join(basePath, dir, '/txt'), function (err) {
+              if (err){
+                console.error(err);
+              } else {
+                fs.copy(path.join(__dirname, '../template', 'txt' , 'SUMMARY.md'), path.join(basePath, dir , 'txt', 'SUMMARY.md'));
+
+                fs.copy(path.join(__dirname,'../template', 'txt', 'section1'), path.join(basePath, dir , 'txt', 'section1'), function(err){
+                  if(err) {
+                    return console.error(err);
+                  }
+
+                });
+
+                ejs.renderFile(path.join(__dirname, '../template', 'txt', 'README.ejs'), { name_gb: n_gitbook}, function(err,str) {
+                  if(err) {
+                    console.error(err);
+                    throw err;
+                  } else {
+                    if(str)
+                    fs.writeFile(path.join(basePath, dir ,'txt', 'README.md'), str);
+                  }
+                });
+              }
+            });
+          }
+        });
+
+        // Fichero package.json
+
+        ejs.renderFile(path.join(__dirname, '../template', 'package.ejs'), { autor_name: autor , name_gb: n_gitbook, url: url_r_, url_b_: url_b_}, function(err,str){
+
+          if(err){
+            console.error("ERROR:"+err);
+          }
+          if(str){
+            fs.writeFile(path.join(basePath, dir , 'package.json'), str);
+          }
+        });
+        // Fichero "book.json"
+        ejs.renderFile(path.join(__dirname, '../template', 'book.ejs'), { name_gb: n_gitbook}, function(err,str){
+          if(err) {
+            console.error("ERROR:"+err);
+          }
+          if(str)
+          fs.writeFile(path.join(basePath, dir , 'book.json'), str);
+
+        });
+        console.log("Construido!");
       });
+    }
 
-      // Fichero package.json
-
-      ejs.renderFile(path.join(__dirname, '../template', 'package.ejs'), { autor_name: autor , name_gb: n_gitbook, url: url_r_, url_b_: url_b_}, function(err,str){
-
-        if(err){
-          console.error("ERROR:"+err);
-        }
-        if(str){
-          fs.writeFile(path.join(basePath, dir , 'package.json'), str);
-        }
-      });
-      // Fichero "book.json"
-      ejs.renderFile(path.join(__dirname, '../template', 'book.ejs'), { name_gb: n_gitbook}, function(err,str){
-        if(err) {
-          console.error("ERROR:"+err);
-        }
-        if(str)
-        fs.writeFile(path.join(basePath, dir , 'book.json'), str);
-
-      });
-      console.log("Construido!");
-    });
   }
+
 }
