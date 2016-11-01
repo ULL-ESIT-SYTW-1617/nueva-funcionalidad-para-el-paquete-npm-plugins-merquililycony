@@ -15,14 +15,14 @@ gulp.task('push', function(){
 
 // Install dependencies and resources
 
-gulp.task('install-resource', function()
+gulp.task('instalar-recursos', function()
 {
     gulp.src(['./package.json']).pipe(install());
 });
 
 
 //Deploy
-gulp.task('deploy', ['install-resource', 'push'], function()
+gulp.task('deploy', ['instalar-recursos', 'push'], function()
 {
     return gulp.src('')
            .pipe(shell([
@@ -31,11 +31,6 @@ gulp.task('deploy', ['install-resource', 'push'], function()
 });
 
 
-// Pull de iaas
-
-gulp.task('iaas', function() {
-    gulp.src(['./template/scripts/iaas']).exec();
-});
 
 
 gulp.task('default', ['deploy']);
