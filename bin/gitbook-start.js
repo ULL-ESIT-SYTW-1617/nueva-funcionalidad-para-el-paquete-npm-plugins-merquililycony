@@ -18,7 +18,8 @@ var url_b_; // para modificar la url de los bugs
 // var url_wiki_;
 
 // Menu
-if (myargs.h || myargs.help) {
+if (myargs.h || myargs.help)
+{
   console.log("Help!");
   console.log("Comando: gitbook-start [opciones]");
   console.log("-d <directorio donde se desplegara gitbook>");
@@ -36,11 +37,26 @@ else
   }
   else
   {
-    if(myargs.deploy)
+    if(myArgs.deploy)//NUEVA FUNCIONALIDAD DEPLOY
     {
-      //NUEVA FUNCIONALIDAD QUE DEBEMOS HACER............................
-      //...........................
-    }
+        const packagejson = require(path.join(basePath, 'package.json'));
+        console.log("Deploy ...  "+myArgs.deploy);
+
+        var dependencias = packagejson.dependencies;
+        try {
+            for (var d in dependencias){
+                if(d.search(myArgs.deploy) != -1){
+
+                    require(path.join(basePath,'node_modules',d)).initialize(myArgs.IP,myArgs.path,packagejson.repository.url,myArgs.usuarioremoto);
+                    break;
+
+                }
+
+            }
+        } catch(e){
+            console.log("Plugin error!!: "+ e);
+        }
+}//FIN NUEVA FUNCIONALIDAD DEPLOY
     else {//CREAR GITBOOK
       gitconfig(function(err,config){
         if(err){
