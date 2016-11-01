@@ -39,24 +39,24 @@ else
   {
     if(myArgs.deploy)//NUEVA FUNCIONALIDAD DEPLOY
     {
-        const packagejson = require(path.join(basePath, 'package.json'));
-        console.log("Deploy ...  "+myArgs.deploy);
+      const packagejson = require(path.join(basePath, 'package.json'));
+      console.log("Deploy ...  "+myArgs.deploy);
 
-        var dependencias = packagejson.dependencies;
-        try {
-            for (var d in dependencias){
-                if(d.search(myArgs.deploy) != -1){
+      var dependencias = packagejson.dependencies;
+      try {
+        for (var d in dependencias){
+          if(d.search(myArgs.deploy) != -1){
 
-                    require(path.join(basePath,'node_modules',d)).initialize(myArgs.IP,myArgs.path,packagejson.repository.url,myArgs.usuarioremoto);
-                    break;
+            require(path.join(basePath,'node_modules',d)).initialize(myArgs.IP,myArgs.path,packagejson.repository.url,myArgs.usuarioremoto);
+            break;
 
-                }
+          }
 
-            }
-        } catch(e){
-            console.log("Plugin error!!: "+ e);
         }
-}//FIN NUEVA FUNCIONALIDAD DEPLOY
+      } catch(e){
+        console.log("Plugin error!!: "+ e);
+      }
+    }//FIN NUEVA FUNCIONALIDAD DEPLOY
     else {//CREAR GITBOOK
       gitconfig(function(err,config){
         if(err){
