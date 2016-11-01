@@ -14,21 +14,21 @@
 7 silly cache add   rawSpec: '.',
 7 silly cache add   spec: '/home/ubuntu/workspace/nueva-funcionalidad-para-el-paquete-npm-plugins-merquililycony',
 7 silly cache add   type: 'directory' }
-8 verbose addLocalDirectory /home/ubuntu/.npm/sytw1617-merquililycony/1.2.13/package.tgz not in flight; packing
+8 verbose addLocalDirectory /home/ubuntu/.npm/sytw1617-merquililycony/1.0.0/package.tgz not in flight; packing
 9 verbose correctMkdir /home/ubuntu/.npm correctMkdir not in flight; initializing
-10 verbose tar pack [ '/home/ubuntu/.npm/sytw1617-merquililycony/1.2.13/package.tgz',
+10 verbose tar pack [ '/home/ubuntu/.npm/sytw1617-merquililycony/1.0.0/package.tgz',
 10 verbose tar pack   '/home/ubuntu/workspace/nueva-funcionalidad-para-el-paquete-npm-plugins-merquililycony' ]
-11 verbose tarball /home/ubuntu/.npm/sytw1617-merquililycony/1.2.13/package.tgz
+11 verbose tarball /home/ubuntu/.npm/sytw1617-merquililycony/1.0.0/package.tgz
 12 verbose folder /home/ubuntu/workspace/nueva-funcionalidad-para-el-paquete-npm-plugins-merquililycony
-13 info prepublish sytw1617-merquililycony@1.2.13
-14 verbose addLocalTarball adding from inside cache /home/ubuntu/.npm/sytw1617-merquililycony/1.2.13/package.tgz
+13 info prepublish sytw1617-merquililycony@1.0.0
+14 verbose addLocalTarball adding from inside cache /home/ubuntu/.npm/sytw1617-merquililycony/1.0.0/package.tgz
 15 verbose correctMkdir /home/ubuntu/.npm correctMkdir not in flight; initializing
-16 silly cache afterAdd sytw1617-merquililycony@1.2.13
-17 verbose afterAdd /home/ubuntu/.npm/sytw1617-merquililycony/1.2.13/package/package.json not in flight; writing
+16 silly cache afterAdd sytw1617-merquililycony@1.0.0
+17 verbose afterAdd /home/ubuntu/.npm/sytw1617-merquililycony/1.0.0/package/package.json not in flight; writing
 18 verbose correctMkdir /home/ubuntu/.npm correctMkdir not in flight; initializing
-19 verbose afterAdd /home/ubuntu/.npm/sytw1617-merquililycony/1.2.13/package/package.json written
+19 verbose afterAdd /home/ubuntu/.npm/sytw1617-merquililycony/1.0.0/package/package.json written
 20 silly publish { name: 'sytw1617-merquililycony',
-20 silly publish   version: '1.2.13',
+20 silly publish   version: '1.0.0',
 20 silly publish   main: 'gitbook-start.js',
 20 silly publish   bin: { 'gitbook-start': './bin/gitbook-start.js' },
 20 silly publish   scripts:
@@ -69,10 +69,10 @@
 20 silly publish      'ssh-exec': '^2.0.0' },
 20 silly publish   readme: '# Práctica 4 : Nueva funcionalidad para el Paquete NPM: plugins\n\n# Objetivo:\n*El objetivo de esta práctica es extender el package NodeJS publicado en npm en una práctica anterior con una nueva*\n*funcionalidad que permita que los usuarios con conocimientos de NodeJS puedan extender la conducta del ejecutable*\n*para que este realice el despliegue en plataformas distintas de las ya consideradas.*\n\n## Enlaces :\n\n **Enlace al campus virtual**\n\n * [Enunciado](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/practicas/practicaplugin.html)\n\n **Repositorio GitHuB donde se realizó la práctica**\n\n * [Organización](https://github.com/ULL-ESIT-SYTW-1617/nueva-funcionalidad-para-el-paquete-npm-plugins-merquililycony/)\n\n **Enlace a Gh-pages**\n\n * [gh-pages](https://ull-esit-sytw-1617.github.io/nueva-funcionalidad-para-el-paquete-npm-plugins-merquililycony/)\n\n * [npm](https://www.npmjs.com/package/sytw1617-merquililycony)\n\n **Página de los autores**\n\n * [Constanza](http://alu0100673647.github.io)\n * [Merquis](http://merquis.github.io)\n * [Liliana](https://alu0100762846.github.io)\n',
 20 silly publish   readmeFilename: 'README.md',
-20 silly publish   gitHead: '0736c7c925574ab382ac640a5481cc4fa7da174e',
+20 silly publish   gitHead: 'c1d1ca9a8e4d3b372164a40ae27628e29819f529',
 20 silly publish   description: '# Objetivo: *El objetivo de esta práctica es extender el package NodeJS publicado en npm en una práctica anterior con una nueva* *funcionalidad que permita que los usuarios con conocimientos de NodeJS puedan extender la conducta del ejecutable* *para que este realice el despliegue en plataformas distintas de las ya consideradas.*',
-20 silly publish   _id: 'sytw1617-merquililycony@1.2.13',
-20 silly publish   _shasum: '70a9c09294e561ace7b8f2f2e7cda24cc036b22b',
+20 silly publish   _id: 'sytw1617-merquililycony@1.0.0',
+20 silly publish   _shasum: '54abec6e1eda93e684bd8c3d42fc74b247011245',
 20 silly publish   _from: '.' }
 21 verbose getPublishConfig undefined
 22 silly mapToRegistry name sytw1617-merquililycony
@@ -87,29 +87,29 @@
 25 silly mapToRegistry   type: 'tag' }
 26 silly mapToRegistry uri https://registry.npmjs.org/sytw1617-merquililycony
 27 verbose publish registryBase https://registry.npmjs.org/
-28 silly publish uploading /home/ubuntu/.npm/sytw1617-merquililycony/1.2.13/package.tgz
+28 silly publish uploading /home/ubuntu/.npm/sytw1617-merquililycony/1.0.0/package.tgz
 29 verbose request uri https://registry.npmjs.org/sytw1617-merquililycony
 30 verbose request sending authorization for write operation
-31 info attempt registry request try #1 at 4:50:19 PM
+31 info attempt registry request try #1 at 4:51:27 PM
 32 verbose request using bearer token for auth
-33 verbose request id 0a4ebb942837a900
+33 verbose request id 7a4b893506b7be69
 34 http request PUT https://registry.npmjs.org/sytw1617-merquililycony
 35 http 403 https://registry.npmjs.org/sytw1617-merquililycony
 36 verbose headers { 'content-type': 'application/json',
 36 verbose headers   'cache-control': 'max-age=300',
-36 verbose headers   'content-length': '96',
+36 verbose headers   'content-length': '95',
 36 verbose headers   'accept-ranges': 'bytes',
-36 verbose headers   date: 'Tue, 01 Nov 2016 16:50:20 GMT',
+36 verbose headers   date: 'Tue, 01 Nov 2016 16:51:28 GMT',
 36 verbose headers   via: '1.1 varnish',
 36 verbose headers   connection: 'keep-alive',
-36 verbose headers   'x-served-by': 'cache-lhr6324-LHR',
+36 verbose headers   'x-served-by': 'cache-lhr6348-LHR',
 36 verbose headers   'x-cache': 'MISS',
 36 verbose headers   'x-cache-hits': '0',
-36 verbose headers   'x-timer': 'S1478019019.733348,VS0,VE1127',
+36 verbose headers   'x-timer': 'S1478019087.578558,VS0,VE854',
 36 verbose headers   vary: 'Accept-Encoding' }
 37 verbose request invalidating /home/ubuntu/.npm/registry.npmjs.org/sytw1617-merquililycony on PUT
 38 error publish Failed PUT 403
-39 verbose stack Error: "You cannot publish over the previously published version 1.2.13." : sytw1617-merquililycony
+39 verbose stack Error: "You cannot publish over the previously published version 1.0.0." : sytw1617-merquililycony
 39 verbose stack     at makeError (/home/ubuntu/.nvm/versions/node/v4.5.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
 39 verbose stack     at CachingRegistryClient.<anonymous> (/home/ubuntu/.nvm/versions/node/v4.5.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
 39 verbose stack     at Request._callback (/home/ubuntu/.nvm/versions/node/v4.5.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
@@ -128,7 +128,7 @@
 45 error node v4.5.0
 46 error npm  v2.15.9
 47 error code E403
-48 error "You cannot publish over the previously published version 1.2.13." : sytw1617-merquililycony
+48 error "You cannot publish over the previously published version 1.0.0." : sytw1617-merquililycony
 49 error If you need help, you may report this error at:
 49 error     <https://github.com/npm/npm/issues>
 50 verbose exit [ 1, true ]
