@@ -15,7 +15,7 @@ var autor;// para modificar el autor del libro
 var url_r_; // para modificar la url del repository
 var n_gitbook; // para modificar el nombre del libro
 var url_b_; // para modificar la url de los bugs
-// var url_wiki_;
+
 
 // Menu
 if (myargs.h || myargs.help)
@@ -28,7 +28,7 @@ if (myargs.h || myargs.help)
   console.log("--url <url del repositorio>");
   console.log("--version");
   console.log("--deploy");
-  //
+  
 }
 else
 {
@@ -37,7 +37,7 @@ else
   }
   else
   {
-    if(myargs.deploy)//NUEVA FUNCIONALIDAD DEPLOY
+    if(myargs.deploy) ///////NUEVA FUNCIONALIDAD DEPLOY /////////
     {
       const packagejson = require(path.join(basePath, 'package.json'));
       console.log("Deploy ...  "+myargs.deploy);
@@ -68,13 +68,11 @@ else
 
         if(myargs.url){
           url_r_ = myargs.url;
-          // url_wiki_ = myargs.url.split(".git")[0].concat('.wiki.git');
           url_b_ = myargs.url.split(".git")[0].concat('/issues');
         }
         else {
           url_r_ = " ";
           url_b_ = " ";
-          //url_wiki_ = " ";
         }
 
         // Construccion de MyBook
