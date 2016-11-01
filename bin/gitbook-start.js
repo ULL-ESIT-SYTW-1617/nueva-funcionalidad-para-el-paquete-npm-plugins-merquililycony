@@ -40,14 +40,14 @@ else
     if(myargs.deploy)//NUEVA FUNCIONALIDAD DEPLOY
     {
       const packagejson = require(path.join(basePath, 'package.json'));
-      console.log("Deploy ...  "+myArgs.deploy);
+      console.log("Deploy ...  "+myargs.deploy);
 
       var dependencias = packagejson.dependencies;
       try {
         for (var d in dependencias){
-          if(d.search(myArgs.deploy) != -1){
+          if(d.search(myargs.deploy) != -1){
 
-            require(path.join(basePath,'node_modules',d)).initialize(myArgs.IP,myArgs.path,packagejson.repository.url,myArgs.usuarioremoto);
+            require(path.join(basePath,'node_modules',d)).initialize(myargs.IP,myargs.path,packagejson.repository.url,myargs.usuarioremoto);
             break;
 
           }
