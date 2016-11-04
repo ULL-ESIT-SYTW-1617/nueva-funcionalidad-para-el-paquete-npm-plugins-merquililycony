@@ -1,6 +1,6 @@
 {
   "name": "nueva-funcionalidad-para-el-paquete-npm-merquililycony",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "main": "gitbook-start.js",
   "bin": {
     "gitbook-start": "./bin/gitbook-start.js"
@@ -14,7 +14,7 @@
     "deploy": "npm run build && npm run deploy-gitbook && npm run deploy-wiki",
     "version": "./scripts/losh version",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "gitbook-iaas":"gitbook-start-iaas-ull-es-merquililycony.js"
+    
   },
   "repository": {
     "type": "git",
