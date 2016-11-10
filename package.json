@@ -43,9 +43,9 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/ULL-ESIT-SYTW-1617/creacion-de-paquetes-y-modulos-en-nodejs-merquililycony/issues"
+    "url": "https://github.com/ULL-ESIT-SYTW-1617/nueva-funcionalidad-para-el-paquete-npm-plugins-merquililycony/issues"
   },
-  "homepage": "https://github.com/ULL-ESIT-SYTW-1617/creacion-de-paquetes-y-modulos-en-nodejs-merquililyconyy#readme",
+  "homepage": "https://github.com/ULL-ESIT-SYTW-1617/nueva-funcionalidad-para-el-paquete-npm-plugins-merquililycony#readme",
   "engines": {
     "node": "4.5.0"
   },
