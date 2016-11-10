@@ -1,4 +1,4 @@
-# Práctica 4 : Nueva funcionalidad para el Paquete NPM: plugins (IAAS)
+# Práctica 4 : Nueva funcionalidad para el Paquete NPM: plugins 
 
 # Objetivo:
 *El objetivo de esta práctica es extender el package NodeJS publicado en npm en una práctica anterior con una nueva*
