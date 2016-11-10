@@ -7,7 +7,47 @@
 
 
 [Plugin: gitbook-start-iaas-ull-es-merquililycony](https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-iaas-ull-es-merquililycony)
+
 [Plugin: gitbook-start-heroku-merquililycony](https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-heroku-merquililycony)
+
+1- Descargamos el paquete inicial: **gitbook-start**
+    
+```bash
+$ npm install -g nueva-funcionalidad-para-el-paquete-npm-merquililycony
+```
+
+2- Creamos el libro :
+    
+```bash
+$ gitbook-start -d <directorio> --autor <autor> --name <nombre_libro> --url <url_repo>
+```
+
+Opciones disponibles para la creación del libro:
+    
+    -d o --directorio <directorio en el que se desplegará el libro>
+    
+    --autor <autor del libro>
+    
+    --name  <nombre del libro>
+    
+    --url <url del repositorio en github>
+
+    --help 
+    
+    --version
+
+3- Nos colocamos en la carpeta que contiene el libro.
+
+```bash
+$ cd <directorio>
+```
+
+4- Instalmos las dependencias necesarias:
+    
+```bash
+$ npm install 
+```
+
 
 ## Enlaces :
 
