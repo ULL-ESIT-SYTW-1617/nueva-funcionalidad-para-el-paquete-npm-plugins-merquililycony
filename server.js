@@ -5,16 +5,16 @@ var express = require('express');
 var app = express();
 var path = require('path');
 
-var exec = require('child_process').exec; 
+var exec = require('child_process').exec;
 
-    
+
    // ruteo
 
 app.use(express.static(path.join(__dirname,'./gh-pages')));
 
 
 app.get('/', function(request, response) {
- response.send('index');  
+ response.send('index');
 });
 
 
@@ -23,18 +23,19 @@ app.post('/sync', function(request, response) {
            console.log("Salida:"+stdout);
            if(error) console.log("Error:"+error);
          }
-   exec('git clone https://github.com/ULL-ESIT-SYTW-1617/practica-despliegues-en-iaas-y-heroku-merquililycony.git'); 
-   exec("git pull https://github.com/ULL-ESIT-SYTW-1617/practica-despliegues-en-iaas-y-heroku-merquililycony.git  master", puts);
-   response.redirect('/');
-}); 
 
-     
+   exec('git clone https://github.com/ULL-ESIT-SYTW-1617/nueva-funcionalidad-para-el-paquete-npm-plugins-merquililycony');
+   exec("git pull https://github.com/ULL-ESIT-SYTW-1617/nueva-funcionalidad-para-el-paquete-npm-plugins-merquililycony.git  master", puts);
+   response.redirect('/');
+});
+
+
     // escuchar
    // app.listen(8080);
 app.set('port', process.env.PORT || 8080);
 
 
-//heroku git:remote -a heroku-project-name    
+//heroku git:remote -a heroku-project-name
 app.listen(app.get('port'), function() {
   console.log('Servidor escuchando en el puerto:'+app.get('port'));
 });
