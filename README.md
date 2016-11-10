@@ -19,7 +19,7 @@
 
  * [gh-pages](https://ull-esit-sytw-1617.github.io/nueva-funcionalidad-para-el-paquete-npm-plugins-merquililycony/)
 
- * [npm](https://www.npmjs.com/package/sytw1617-merquililycony)
+ * [npm](https://www.npmjs.com/package/nueva-funcionalidad-para-el-paquete-npm-merquililycony)
 
  **Página de los autores**
 
