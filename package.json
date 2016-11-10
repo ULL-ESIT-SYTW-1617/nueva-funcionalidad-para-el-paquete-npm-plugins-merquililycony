@@ -14,12 +14,12 @@
     "deploy": "npm run build && npm run deploy-gitbook && npm run deploy-wiki",
     "version": "./scripts/losh version",
     "test": "echo \"Error: no test specified\" && exit 1",
-    
+
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ULL-ESIT-SYTW-1617/creacion-de-paquetes-y-modulos-en-nodejs-merquililycony.git",
-    "wiki": "https://github.com/ULL-ESIT-SYTW-1617/creacion-de-paquetes-y-modulos-en-nodejs-merquililycony.wiki.git"
+    "url": "git+https://github.com/ULL-ESIT-SYTW-1617/nueva-funcionalidad-para-el-paquete-npm-plugins-merquililycony.git",
+    "wiki": "https://github.com/ULL-ESIT-SYTW-1617/nueva-funcionalidad-para-el-paquete-npm-plugins-merquililycony.wiki.git"
   },
   "keywords": [
     "gitbook",
