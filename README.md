@@ -58,10 +58,22 @@ $ npm install --save gitbook-start-iaas-ull-es-merquililycony
 $ npm install --save gitbook-start-heroku-merquililycony
 ```
 
-6-Actualizar nuestro repositorio : **gulp push --mensaje <mensaje commit>**.
+6-Actualizar nuestro repositorio : **gulp push **.
 
+7- Nos logueamos en Heroku
 
-7- Ejecutamos --deploy especificando la máquina remota dónde se realizara el despliegue:
+```bash
+$ heroku login
+```
+
+8- En el fichero package.json ponemos el nombre de nuestra app
+```bash
+"Heroku":{
+    "nombre_app":"<nombre app>"
+}
+```
+
+9- Ejecutamos --deploy especificando la máquina remota dónde se realizara el despliegue:
    
 ```bash
 $ gitbook-start --deploy heroku [Opciones] (si despleguamos en heroku)
@@ -72,7 +84,11 @@ $ gitbook-start --deploy iaas-ull-es [Opciones] (si despleguamos en Iaas)
 NOTA : Después de ejecutar lo anterior, en el gulpfile.js se generará de manera automatica una tarea llamada
 "deploy-<máquina en la que realizar el despliegue>", esta tarea nos permite actualizar el contenido de la maquitna.
 
+10- Ejecutamos para actualizar los cambios en el gitbook desplegado en heroku
 
+```bash
+$ gulp deploy-heroku
+```
 ## Enlaces :
 
  **Enlace al campus virtual**
