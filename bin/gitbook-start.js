@@ -82,7 +82,7 @@ else
           } else {
 
             fs.copy(path.join(__dirname,'../template','gulpfile.js'), path.join(basePath, dir , 'gulpfile.js'));
-            fs.copy(path.join(__dirname,'../template','app.js'), path.join(basePath, directorio , 'app.js'));
+            fs.copy(path.join(__dirname,'../template','app.js'), path.join(basePath, dir , 'app.js'));
             fs.copy(path.join(__dirname,'../template','README.md'), path.join(basePath, dir , 'README.md'));
             fs.copy(path.join(__dirname, '../template', 'VERSION'), path.join(basePath, dir , 'VERSION'));
             fs.mkdirp(path.join(basePath, dir , 'scripts'), function (err) {
