@@ -1,6 +1,6 @@
 {
   "name": "nueva-funcionalidad-para-el-paquete-npm-merquililycony",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "gitbook-start.js",
   "bin": {
     "gitbook-start": "./bin/gitbook-start.js"
@@ -47,7 +47,7 @@
   },
   "homepage": "https://github.com/ULL-ESIT-SYTW-1617/nueva-funcionalidad-para-el-paquete-npm-plugins-merquililycony#readme",
   "engines": {
-    "node": "4.5.0"
+    "node": "^4.5.0"
   },
   "dependencies": {
     "ejs": "^2.5.2",
