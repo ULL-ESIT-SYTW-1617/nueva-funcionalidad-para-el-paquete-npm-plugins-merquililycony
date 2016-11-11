@@ -1,11 +1,31 @@
 /*
 * Dependencias
 */
-var gulp  = require('gulp');
+var gulp = require('gulp');
 var shell = require('gulp-shell');
 var install = require('gulp-install');
+var path = require('path');
+var json = require(path.join(__dirname,'package.json'));
+var git = require('simple-git');
+var fs = require('fs-extra');
 
-
+gulp.task('push', function(){
+    if (!fs.existsSync(path.join(__dirname, '.git'))){
+      git()
+        .init()
+        .add('./*')
+        .commit("first commit")
+        .addRemote('origin', json.repository.url)
+        .push('origin', 'master');
+    }
+    else
+    {
+       git()
+        .add('./*')
+        .commit("Actualizando Gitbook.")
+        .push('origin', 'master');   
+    }
+});
 gulp.task('deploy', function () {
   return gulp.src('').pipe(shell(["./scripts/losh deploy-gitbook"]))
       .pipe(shell(['./scripts/losh generate-gitbook']))
