@@ -10,7 +10,7 @@ gulp.task('push', function(){
     var mscommit = myArgs.mensaje || "Actualizando...";
     git()
         .add('./*')
-        .commit("mscommit")
+        .commit(mscommit)
         .push('origin', 'master');
 });
 
