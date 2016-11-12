@@ -7,9 +7,10 @@ var git = require('simple-git');
 
 // Repositorio Github
 gulp.task('push', function(){
+    var mscommit = myArgs.mensaje || "Actualizando...";
     git()
         .add('./*')
-        .commit("update package")
+        .commit("mscommit")
         .push('origin', 'master');
 });
 

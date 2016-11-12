@@ -10,8 +10,9 @@ var  expressEJS = require('express-ejs-layouts')
 
    // ruteo
 
-app.use(express.static(path.join(__dirname,'./gh-pages')));
-
+app.set('port', process.env.PORT || 8080);
+app.use(expressEJS);
+app.use(express.static(path.join(__dirname,'gh-pages')));
 
 app.get('/', function(request, response) {
  response.send('index');
@@ -32,10 +33,8 @@ app.get('/', function(request, response) {
 
     // escuchar
    // app.listen(8080);
-app.set('port', process.env.PORT || 8080);
 
-app.use(expressEJS);
-app.use(express.static(path.join(__dirname,'gh-pages')));
+
 //heroku git:remote -a heroku-project-name
 app.listen(app.get('port'), function() {
   console.log('Servidor escuchando en el puerto:'+app.get('port'));
