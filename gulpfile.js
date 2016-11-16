@@ -6,11 +6,12 @@ var git = require('simple-git');
 
 
 // Repositorio Github
-gulp.task('push', function(){
-    var mscommit = myArgs.mensaje || "Actualizando...";
+gulp.task('push_github', function(){
     git()
+        .init()
         .add('./*')
-        .commit(mscommit)
+        .commit("subiendo libro al repo")
+        .addRemote('origin', 'https://github.com/ALU0100673647/tutu.git')
         .push('origin', 'master');
 });
 
