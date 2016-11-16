@@ -127,7 +127,7 @@ else
 
         // Fichero package.json
 
-        ejs.renderFile(path.join(__dirname, '../template', 'package.ejs'), { autor_name: autor , name_gb: n_gitbook, url: url_r_, url_b_: url_b_}, function(err,str){
+        ejs.renderFile(path.join(__dirname, '../template', 'package.ejs'), { autor_name: autor , name_gb: n_gitbook, url: url_r_, url_b_: url_b_,dir_name:dir}, function(err,str){
 
           if(err){
             console.error("ERROR:"+err);
