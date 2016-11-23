@@ -37,9 +37,5 @@ gulp.task('deploy', ['instalar-recursos', 'push'], function()
 
 gulp.task('default', ['deploy']);
 
-gulp.task('deploy-ull-iaas-es',function(){
-    var iaas = require ("gitbook-start-iaas-ull-es-merquililycony");
-    var result = iaas.deploy();
-});
 
 
