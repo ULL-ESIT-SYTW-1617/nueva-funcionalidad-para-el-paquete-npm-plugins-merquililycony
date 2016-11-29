@@ -1,6 +1,6 @@
 {
   "name": "nueva-funcionalidad-para-el-paquete-npm-merquililycony",
-  "version": "1.0.26",
+  "version": "1.0.27",
   "main": "gitbook-start.js",
   "bin": {
     "gitbook-start": "./bin/gitbook-start.js"
@@ -54,7 +54,6 @@
     "fs-extra": "^0.30.0",
     "gh-pages": "^0.11.0",
     "git-config": "^0.0.7",
-    "gitbook-start-iaas-ull-es-merquililycony": "^1.0.8",
     "gulp": "^3.9.1",
     "gulp-git": "^1.11.3",
     "gulp-install": "^0.6.0",

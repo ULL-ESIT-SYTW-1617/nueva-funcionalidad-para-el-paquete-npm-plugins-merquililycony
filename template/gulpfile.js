@@ -27,7 +27,7 @@ gulp.task('push', function(){
     }
 });
 
-gulp.task('instalar_recursos',['instalar_dependencias','instalar_plugins']);
+///gulp.task('instalar_recursos',['instalar_dependencias','instalar_plugins']);
 
 gulp.task('instalar_dependencias', function()
 {
