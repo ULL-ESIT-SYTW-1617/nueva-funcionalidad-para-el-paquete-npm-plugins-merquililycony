@@ -67,8 +67,8 @@ gulp.task('deploy-ull-iaas-es',function(){
 });
 
 
-gulp.task('deploy-heroku',function() {
-    var hero = require("gitbook-start-heroku-merquililycony/");
-    hero.deploy();
-});
+// gulp.task('deploy-heroku',function() {
+//     var hero = require("gitbook-start-heroku-merquililycony/");
+//     hero.deploy();
+// });
 
