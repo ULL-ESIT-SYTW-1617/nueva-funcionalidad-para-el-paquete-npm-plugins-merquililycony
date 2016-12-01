@@ -1,9 +1,10 @@
 var gulp = require('gulp');
 var shell = require('gulp-shell');
 var install = require('gulp-install');
-var myArgs = require('minimist')(process.argv.slice(2));
+var path = require('path');
+var json = require(path.join(__dirname,'package.json'));
 var git = require('simple-git');
-
+var fs = require('fs-extra');
 
 // Repositorio Github
 gulp.task('push_github', function(){
@@ -11,7 +12,7 @@ gulp.task('push_github', function(){
         .init()
         .add('./*')
         .commit("subiendo libro al repo")
-        .addRemote('origin', 'https://github.com/ALU0100673647/tutu.git')
+        .addRemote('origin', json.repository.url)
         .push('origin', 'master');
 });
 
