@@ -25,7 +25,7 @@ gulp.task('push', function(){
        git()
         .add('./*')
         .commit("Actualizando Gitbook.")
-        .push('origin', 'master');   
+        .push('origin', 'master');
     }
 });
 
@@ -39,8 +39,8 @@ gulp.task('instalar_dependencias', function()
 gulp.task('instalar_plugins', function()
 {
     return gulp.src('').pipe(shell([
-        'gitbook install'    
-    ])) 
+        'gitbook install'
+    ]))
 });
 gulp.task('deploy', function () {
   return gulp.src('').pipe(shell(["./scripts/losh deploy-gitbook"]))
@@ -69,8 +69,16 @@ gulp.task('deploy-ull-iaas-es',function(){
 });
 
 
-gulp.task('deploy-heroku',function() {
+gulp.task('deploy-github',function() {
     var hero = require("gitbook-start-heroku-merquililycony");
     //hero.deploy();
+});
+
+gulp.task('deploy-heroku', function(){
+   return gulp.src('').pipe(shell([
+       'git add . ;'+
+       'git commit -am "Desplegando en Heroku" ;'+
+       'git push heroku master'
+       ]))
 });
 
