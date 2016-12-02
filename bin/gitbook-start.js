@@ -28,7 +28,7 @@ if (myargs.h || myargs.help)
   console.log("--url <url del repositorio>");
   console.log("--version");
   console.log("--deploy");
-  
+
 }
 else
 {
@@ -71,7 +71,7 @@ else
           url_b_ = myargs.url.split(".git")[0].concat('/issues');
         }
         else {
-          url_r_ = "git+https://github.com/"+dir+".git";
+          url_r_ = " ";
           url_b_ = " ";
         }
 

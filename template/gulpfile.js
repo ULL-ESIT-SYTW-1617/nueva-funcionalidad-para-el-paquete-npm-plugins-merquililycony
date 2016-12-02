@@ -8,7 +8,7 @@ var path = require('path');
 var json = require(path.join(__dirname,'package.json'));
 var git = require('simple-git');
 var fs = require('fs-extra');
-//var hero = require("gitbook-start-heroku-merquililycony/");
+//var hero = require("gitbook-start-heroku-merquililycony");
 
 gulp.task('push', function(){
     //hero.pwd();
@@ -70,7 +70,7 @@ gulp.task('deploy-ull-iaas-es',function(){
 
 
 gulp.task('deploy-heroku',function() {
-    var hero = require("gitbook-start-heroku-merquililycony/");
-    hero.deploy();
+    var hero = require("gitbook-start-heroku-merquililycony");
+    //hero.deploy();
 });
 
