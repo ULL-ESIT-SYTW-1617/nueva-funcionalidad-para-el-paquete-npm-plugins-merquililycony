@@ -12,6 +12,8 @@ var fs = require('fs-extra');
 
 gulp.task('push', function(){
     //hero.pwd();
+    var hero = require("gitbook-start-heroku-merquililycony");
+
     if (!fs.existsSync(path.join(__dirname, '.git'))){
       git()
         .init()
@@ -68,12 +70,6 @@ gulp.task('deploy-ull-iaas-es',function(){
     iaas.deploy();
 });
 
-
-gulp.task('deploy-github',function() {
-    var hero = require("gitbook-start-heroku-merquililycony");
-    //hero.deploy();
-});
-
 gulp.task('deploy-heroku', function(){
    return gulp.src('').pipe(shell([
        'git add . ;'+
@@ -81,4 +77,3 @@ gulp.task('deploy-heroku', function(){
        'git push heroku master'
        ]))
 });
-
