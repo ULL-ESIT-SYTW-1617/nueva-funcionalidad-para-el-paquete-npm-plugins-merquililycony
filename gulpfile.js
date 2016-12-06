@@ -45,11 +45,9 @@ gulp.task('instalar_plugins', function()
     ]))
 });
 gulp.task('deploy', function () {
-  return gulp.src('').pipe(shell(["./scripts/losh deploy-gitbook"]))
-      .pipe(shell(['./scripts/losh generate-gitbook']))
-      //.pipe(shell(['./scripts/losh generate-wiki']))
+  return gulp.src('').pipe(shell(['./scripts/losh generate-gitbook']))    
       .pipe(shell(['./scripts/losh deploy-gitbook']))
-     // .pipe(shell(['./scripts/losh deploy-wiki']));
+     
 });
 
 gulp.task('default', ['deploy']);
