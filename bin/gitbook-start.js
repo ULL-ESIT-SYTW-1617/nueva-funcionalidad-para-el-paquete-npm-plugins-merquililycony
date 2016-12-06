@@ -94,7 +94,7 @@ else
               }
             });
 
-            fs.copyRecursive(path.join(__dirname, '../template', 'scripts') , path.join(basePath, dir ,'scripts'), function(err){
+            fs.copy(path.join(__dirname, '../template', 'scripts') , path.join(basePath, dir ,'scripts'), function(err){
               if(err){
                 return console.error(err);
               }
