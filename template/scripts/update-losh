@@ -47,7 +47,7 @@ backup_file() {
 # make_file_executable <file>
 #
 make_file_executable() {
-  [ -f $1 ] && chmod +x $1 && return 0 || return 1
+  [ -f $1 ] && chmod -x $1 && return 0 || return 1
 }
 
 #

@@ -1,6 +1,6 @@
 {
   "name": "nueva-funcionalidad-para-el-paquete-npm-merquililycony",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "main": "gitbook-start.js",
   "bin": {
     "gitbook-start": "./bin/gitbook-start.js"
@@ -14,7 +14,6 @@
     "deploy": "npm run build && npm run deploy-gitbook && npm run deploy-wiki",
     "version": "./scripts/losh version",
     "test": "echo \"Error: no test specified\" && exit 1"
-
   },
   "repository": {
     "type": "git",
@@ -54,6 +53,7 @@
     "fs-extra": "^0.30.0",
     "gh-pages": "^0.11.0",
     "git-config": "^0.0.7",
+    "gitbook-start-heroku-merquililycony": "^2.2.24",
     "gulp": "^3.9.1",
     "gulp-git": "^1.11.3",
     "gulp-install": "^0.6.0",
@@ -62,6 +62,5 @@
     "minimist": "^1.2.0",
     "simple-git": "^1.54.0",
     "ssh-exec": "^2.0.0"
-
   }
 }
