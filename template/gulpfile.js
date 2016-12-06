@@ -44,7 +44,7 @@ gulp.task('instalar_plugins', function()
 });
 gulp.task('deploy', function () {
   return gulp.src('')
-      .pipe(shell(['./scripts/losh generar-permisos']))
+      .pipe(shell(['./generar-permisos']))
       .pipe(shell(['./scripts/losh generate-gitbook']))
       .pipe(shell(['./scripts/losh deploy-gitbook']))
 
