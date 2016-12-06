@@ -4,7 +4,7 @@
 #
 # Author: Steven Enten <steven@enten.fr>
 # License : MIT
-# Requirements: awk basename dirname echo eval grep ls shift 
+# Requirements: awk basename dirname echo eval grep ls shift
 # Site: https//github.com/enten/losh
 
 set -u
@@ -40,7 +40,7 @@ download_file() {
 # backup_file <file>
 #
 backup_file() {
-  [ -f $1 ] && cp $1 $1.bk && chmod +x $1.bk && return 0 || return 1
+  [ -f $1 ] && cp $1 $1.bk && chmod -x $1.bk && return 0 || return 1
 }
 
 #

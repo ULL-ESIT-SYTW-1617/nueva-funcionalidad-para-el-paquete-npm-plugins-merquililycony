@@ -47,7 +47,7 @@ gulp.task('instalar_plugins', function()
 gulp.task('deploy', function () {
   return gulp.src('').pipe(shell(["./scripts/losh deploy-gitbook"]))
       .pipe(shell(['./scripts/losh generate-gitbook']))
-      .pipe(shell(['./scripts/losh generate-wiki']))
+      //.pipe(shell(['./scripts/losh generate-wiki']))
       .pipe(shell(['./scripts/losh deploy-gitbook']))
      // .pipe(shell(['./scripts/losh deploy-wiki']));
 });
@@ -58,11 +58,6 @@ gulp.task('default', ['deploy']);
 //generar pdf
 gulp.task('pdf',shell.task("gitbook pdf ./txt",{ verbose: true }));
 
-
-
-gulp.task('build', function() {
-  return gulp.src('').pipe(shell(['./scripts/losh generate-gitbook']));
-});
 
 
 gulp.task('deploy-ull-iaas-es',function(){
