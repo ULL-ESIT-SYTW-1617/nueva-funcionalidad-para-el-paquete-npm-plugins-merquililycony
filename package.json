@@ -1,6 +1,6 @@
 {
   "name": "nueva-funcionalidad-para-el-paquete-npm-merquililycony",
-  "version": "1.1.9",
+  "version": "1.1.25",
   "main": "gitbook-start.js",
   "bin": {
     "gitbook-start": "./bin/gitbook-start.js"
