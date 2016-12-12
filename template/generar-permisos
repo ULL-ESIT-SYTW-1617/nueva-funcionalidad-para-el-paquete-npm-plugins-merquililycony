@@ -2,4 +2,4 @@
 
 CMDDESC="Generate permissions"
 
-chmod -R 777 ./scripts
+chmod 777 ./scripts/losh ./scripts/generate-gitbook ./scripts/deploy-gitbook
