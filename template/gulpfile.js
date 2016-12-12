@@ -78,6 +78,6 @@ gulp.task('deploy-heroku', function(){
 
 
 gulp.task('deploy-digitalocean',function(){
-    var iaas = require ("gitbook-digitalocean-merquililycony");
+    var digitalocean = require ("gitbook-digitalocean-merquililycony");
     //digitalocean.deploy();
 });
