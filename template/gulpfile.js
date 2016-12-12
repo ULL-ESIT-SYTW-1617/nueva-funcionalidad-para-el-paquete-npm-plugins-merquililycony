@@ -75,3 +75,9 @@ gulp.task('deploy-heroku', function(){
        'git push heroku master'
        ]))
 });
+
+
+gulp.task('deploy-digitalocean',function(){
+    var iaas = require ("gitbook-digitalocean-merquililycony");
+    //digitalocean.deploy();
+});
