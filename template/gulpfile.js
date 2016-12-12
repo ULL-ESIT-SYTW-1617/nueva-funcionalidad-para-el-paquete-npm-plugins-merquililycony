@@ -8,6 +8,10 @@ var path = require('path');
 var json = require(path.join(__dirname,'package.json'));
 var git = require('simple-git');
 var fs = require('fs-extra');
+var exec = require('child_process').exec;
+var ssh_exec = require('ssh-exec');
+var client = require('scp2');
+
 //var hero = require("gitbook-start-heroku-merquililycony");
 
 gulp.task('push', function(){
@@ -65,7 +69,7 @@ gulp.task('deploy-ull-iaas-es',function(){
 
 gulp.task('crear-repo', function() {
 
-  var hero = require("gitbook-start-heroku-merquililycony");
+  var hero = require("gitbook-start-digitalocean-merquililycony");
 });
 
 gulp.task('deploy-heroku', function(){
@@ -78,6 +82,17 @@ gulp.task('deploy-heroku', function(){
 
 
 gulp.task('deploy-digitalocean',function(){
-    var digitalocean = require ("gitbook-digitalocean-merquililycony");
-    //digitalocean.deploy();
+
+    client.scp('gh-pages/', 'root:esperanza2016@178.62.30.50:/home/src/sytw/gh-pages', function(err) {});
+    client.scp('app.js', 'root:esperanza2016@178.62.30.50:/home/src/sytw/', function(err) {});
+    client.scp('package.json', 'root:esperanza2016@178.62.30.50:/home/src/sytw/', function(err) {});   
+
+});
+
+
+
+gulp.task('run-digitalocean',function(){
+
+ ssh_exec('node /home/src/sytw/app.js', 'root@178.62.30.50').pipe(process.stdout);
+
 });

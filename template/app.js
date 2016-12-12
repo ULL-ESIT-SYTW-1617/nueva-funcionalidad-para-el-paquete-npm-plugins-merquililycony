@@ -5,7 +5,7 @@ var express = require('express');
 var app = express();
 var path = require('path');
 //var exec = require('child_process').exec;
-//var  expressEJS = require('express-ejs-layouts')
+var  expressEJS = require('express-ejs-layouts')
 
    // ruteo
 
