@@ -85,14 +85,9 @@ gulp.task('deploy-digitalocean',function(){
 
     client.scp('gh-pages/', 'root:esperanza2016@178.62.30.50:/home/src/sytw/gh-pages', function(err) {});
     client.scp('app.js', 'root:esperanza2016@178.62.30.50:/home/src/sytw/', function(err) {});
-    client.scp('package.json', 'root:esperanza2016@178.62.30.50:/home/src/sytw/', function(err) {});   
+  //  client.scp('package.json', 'root:esperanza2016@178.62.30.50:/home/src/sytw/', function(err) {});
+    ssh_exec('cd /home/src/sytw/; npm install express; npm install express-ejs-layouts; node app.js', 'root@178.62.30.50').pipe(process.stdout);
+
 
 });
 
-
-
-gulp.task('run-digitalocean',function(){
-
- ssh_exec('node /home/src/sytw/app.js', 'root@178.62.30.50').pipe(process.stdout);
-
-});
