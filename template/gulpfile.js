@@ -11,6 +11,9 @@ var fs = require('fs-extra');
 var exec = require('child_process').exec;
 var ssh_exec = require('ssh-exec');
 var client = require('scp2');
+var Curl = require('node-libcurl').Curl;
+var curl = new Curl();
+var json_heroku = require(path.join(__dirname,'.gitbook-start/config_heroku.json'));
 
 //var hero = require("gitbook-start-heroku-merquililycony");
 
@@ -72,8 +75,15 @@ gulp.task('crear-repo', function() {
   var hero = require("gitbook-start-digitalocean-merquililycony");
 });
 
+gulp.task('auth', function() {
+
+  var hero = require("gitbook-start-heroku-merquililycony");
+});
+
 gulp.task('deploy-heroku', function(){
+  var name_app = json_heroku.name;
    return gulp.src('').pipe(shell([
+       'heroku git:remote -a '+name_app+';'+
        'git add . ;'+
        'git commit -am "Desplegando en Heroku" ;'+
        'git push heroku master'
@@ -90,4 +100,3 @@ gulp.task('deploy-digitalocean',function(){
 
 
 });
-
