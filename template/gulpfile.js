@@ -13,7 +13,7 @@ var ssh_exec = require('ssh-exec');
 var client = require('scp2');
 var Curl = require('node-libcurl').Curl;
 var curl = new Curl();
-var json_heroku = require(path.join(__dirname,'.gitbook-start/config_heroku.json'));
+
 
 //var hero = require("gitbook-start-heroku-merquililycony");
 
@@ -81,6 +81,7 @@ gulp.task('auth', function() {
 });
 
 gulp.task('deploy-heroku', function(){
+  var json_heroku = require(path.join(__dirname,'.gitbook-start/config_heroku.json'));
   var name_app = json_heroku.name;
    return gulp.src('').pipe(shell([
        'heroku git:remote -a '+name_app+';'+
