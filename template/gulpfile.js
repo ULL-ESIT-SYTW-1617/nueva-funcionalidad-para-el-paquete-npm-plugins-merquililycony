@@ -83,9 +83,9 @@ gulp.task('auth', function() {
 gulp.task('deploy-iaas',function(){
 
     client.scp('gh-pages/', 'usuario:esperanza@10.6.128.168:/home/usuario/gh-pages', function(err) {});
-    client.scp('app.js', 'usuario:esperanza@10.6.128.168:/home/usuario/', function(err) {});
+    client.scp('app_iaas.js', 'usuario:esperanza@10.6.128.168:/home/usuario/', function(err) {});
   //  client.scp('package.json', 'usuario:esperanza@10.6.128.168:/home/src/sytw/', function(err) {});
-    ssh_exec('cd /home/usuario/; npm install express; npm install express-ejs-layouts; node app.js', 'usuario@10.6.128.168').pipe(process.stdout);
+    ssh_exec('cd /home/usuario/; npm install express; npm install express-ejs-layouts; node app_iaas.js', 'usuario@10.6.128.168').pipe(process.stdout);
 
 
 });
