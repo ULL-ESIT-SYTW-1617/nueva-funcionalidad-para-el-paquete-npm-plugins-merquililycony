@@ -1,29 +1,24 @@
-// importar
-var express = require('express');
-
-// instanciar
-var app = express();
+var fs = require('fs');
+var http = require('http');
+var https = require('https');
 var path = require('path');
-//var exec = require('child_process').exec;
-var  expressEJS = require('express-ejs-layouts')
+var express = require('express');
+var app = express();
 
-   // ruteo
 
-app.set('port', process.env.PORT || 80);
-app.use(expressEJS);
+var privateKey  = fs.readFileSync('./tls/key.pem', 'utf8');
+var certificate = fs.readFileSync('./tls/cert.pem', 'utf8');
+var credentials = {key: privateKey, cert: certificate};
+
+
 app.use(express.static(path.join(__dirname,'gh-pages')));
-
 app.get('/', function(request, response) {
  response.send('index');
 });
 
-    // escuchar
-   // app.listen(80);
 
+var httpServer = http.createServer(app);
+var httpsServer = https.createServer(credentials, app);
 
-app.listen(app.get('port'), function() {
-  console.log('Servidor escuchando en el puerto:'+app.get('port'));
-});
-
-
-module.exports = app;
+httpServer.listen(8080);
+httpsServer.listen(443);

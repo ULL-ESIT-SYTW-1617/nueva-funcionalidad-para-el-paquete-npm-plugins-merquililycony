@@ -83,6 +83,7 @@ else
 
             fs.copy(path.join(__dirname,'../template','gulpfile.js'), path.join(basePath, dir , 'gulpfile.js'));
             fs.copy(path.join(__dirname,'../template','app.js'), path.join(basePath, dir , 'app.js'));
+            fs.copy(path.join(__dirname,'../template','app_iaas.js'), path.join(basePath, dir , 'app_iaas.js'));
             fs.copy(path.join(__dirname,'../template','README.md'), path.join(basePath, dir , 'README.md'));
             fs.copy(path.join(__dirname,'../template','Procfile'), path.join(basePath, dir , 'Procfile'));
             fs.copy(path.join(__dirname,'../template','generar-permisos'), path.join(basePath, dir , 'generar-permisos'));
