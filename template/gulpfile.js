@@ -96,6 +96,7 @@ gulp.task('deploy-heroku', function(){
   var name_app = json_heroku.name;
    return gulp.src('').pipe(shell([
        'git init ;'+
+       'heroku login ;'+
        'heroku git:remote -a '+name_app+';'+
        'git add . ;'+
        'git commit -am "Desplegando en Heroku" ;'+
